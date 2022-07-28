@@ -6,7 +6,7 @@ import traceback
 # 第二步：观察涨停后几天有无天量股票
 # 第三步：观察天量后有无缩量到天量一半一下，则为待观察股票
 class Alg:
-    check_day = 5
+    check_day = 7
     rise_const = 9
     result = False
     file_name = ''
@@ -50,9 +50,9 @@ class Alg:
 
     def cal_zhang_ting(self, datas):
         print(datas)
-        kai_pan = datas['开盘']
+        kai_pan = datas['收盘']
         shou_pan = datas['temp']
-        temp = shou_pan - kai_pan
+        temp = kai_pan - shou_pan
         zhang_ting = (temp / shou_pan) * 100
         datas['rise'] = zhang_ting
         return datas

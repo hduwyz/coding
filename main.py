@@ -1,5 +1,3 @@
-import time
-
 from read_data import ReadData
 from Alg import Alg
 import os
@@ -12,8 +10,8 @@ if __name__ == '__main__':
     rd = ReadData(dir_str)
     alg = Alg()
     file_list = rd.read_file_list();
-    # datas = rd.read_data("SH#600938.txt")
-    # alg.cfmm(datas, "SH#600938.txt")
+    # datas = rd.read_data("SH#603332.txt")
+    # alg.cfmm(datas, "SH#603332.txt")
     print("开始选股：===============================")
     for x in file_list:
         try:
@@ -29,8 +27,7 @@ if __name__ == '__main__':
     print("选股结束：===============================")
     print("选股结果：", code)
     # 写入结果到文件
-    date_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
-    file_path = 'result_data' + date_time + '.txt'
+    file_path = 'result_data.txt'
     with open(file_path, mode='w', encoding='utf-8') as file_obj:
         file_obj.write(str(code))
 
