@@ -7,7 +7,7 @@ import traceback
 # 第三步：观察天量后有无缩量到天量一半一下，则为待观察股票
 class Alg:
     check_day = 5
-    rise_const = 1
+    rise_const = 9
     result = False
     file_name = ''
     num = 1.5
