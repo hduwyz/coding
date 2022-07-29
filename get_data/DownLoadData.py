@@ -10,6 +10,6 @@ def getDataInfo(url, file_name):
         for line in r.iter_lines():
             writer.writerow(line.decode('utf-8').split(','))
 
-getDataInfo(stock_base_info_api, 'stock_base_info.csv')
+getDataInfo(stock_base_info_api, '../data/pre/stock_base_info.csv')
 
-getDataInfo(stock_day_k_line_api, 'stock_day_k_line_api.csv')
+getDataInfo(stock_day_k_line_api, '../data/pre/stock_day_k_line_api.csv')

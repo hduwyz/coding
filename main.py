@@ -27,7 +27,7 @@ if __name__ == '__main__':
     print("选股结束：===============================")
     print("选股结果：", code)
     # 写入结果到文件
-    file_path = 'result_data.txt'
+    file_path = 'data/result/result_data.txt'
     with open(file_path, mode='w', encoding='utf-8') as file_obj:
         file_obj.write(str(code))
 
